@@ -12,6 +12,10 @@ repositories {
 	mavenCentral()
 }
 
+ext {
+	commonsLang3Version='3.9'
+}
+
 dependencies {
 	//Spring boot 
 	implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
@@ -23,7 +27,7 @@ dependencies {
 	implementation 'javax.servlet:javax.servlet-api'
 	implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'
 	//Commons lang3
-	implementation 'org.apache.commons:commons-lang3:3.9'
+	implementation "org.apache.commons:commons-lang3:$commonsLang3Version"
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
